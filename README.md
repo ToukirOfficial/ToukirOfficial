@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:111111,100:ff3b00&height=180&section=header&text=Toukir%20Ahmed%20Rony&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Full-Stack%20Software%20Engineer%20%26%20Technical%20Lead&descAlignY=58&descSize=18" alt="Toukir Ahmed Rony — Full-Stack Software Engineer & Technical Lead" />
+<img src="./banner.png" width="100%" alt="Toukir Ahmed Rony — Full-Stack Software Engineer & Technical Lead" />
 
-<a href="https://toukirahmedrony.com">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=3000&pause=900&color=FF3B00&center=true&vCenter=true&width=620&lines=I+build+complete+business+systems%2C+brief+to+production;TypeScript+%C2%B7+Next.js+%C2%B7+NestJS+%C2%B7+PostgreSQL;AI+features+in+real+products+%C2%B7+MSc+in+AI;Leading+teams+%2B+building+core+features" alt="Typing intro" />
-</a>
+<h3>I build complete business systems — CRMs, client portals and booking platforms — from brief to production.</h3>
 
 <p>
   <a href="https://toukirahmedrony.com"><img src="https://img.shields.io/badge/Portfolio-toukirahmedrony.com-ff3b00?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
@@ -96,6 +94,5 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 <a href="https://toukirahmedrony.com">Portfolio</a> · <a href="https://www.linkedin.com/in/toukir-rony/">LinkedIn</a> · <a href="mailto:toukirofficial1996@gmail.com">Email</a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff3b00,100:111111&height=100&section=footer" alt="" />
 
 </div>
