@@ -12,7 +12,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Based%20in-Huddersfield%2C%20UK-111111?style=flat-square" alt="Based in Huddersfield, UK" />
-  <img src="https://img.shields.io/badge/Open%20to-Full--time%20roles%20%C2%B7%20UK%20%26%20Ireland-ff3b00?style=flat-square" alt="Open to full-time roles in the UK and Ireland" />
+  <img src="https://img.shields.io/badge/Open%20to-Full--time%20roles%20%C2%B7%20UK%2C%20Ireland%20%26%20EU-ff3b00?style=flat-square" alt="Open to full-time roles in the UK, Ireland and EU" />
 </p>
 
 </div>
@@ -21,7 +21,7 @@
 
 ### 👋 About me
 
-I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web and **40+ projects since 2020**, 16 of them for UK businesses in law, care, recruitment, education, construction and hospitality.
+I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web and **25 projects since 2020**, 18 of them for UK businesses in law, care, recruitment, education, construction and hospitality.
 
 - 🏗️ I build **CRMs, client portals, booking platforms and SaaS products**, from the first brief to production
 - 👥 At **SETS Tech** I lead a team of in-house and freelance developers while building core features myself
@@ -79,6 +79,8 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 | Project | What it is | Stack |
 |---|---|---|
+| [**StaffDock**](https://staffdock.co.uk) | UK staff document compliance SaaS, live | Next.js · NestJS · PostgreSQL · Prisma |
+| [**RightUni**](https://rightuni.co.uk) | Free study-abroad organiser with an encrypted document vault, live | Next.js · NestJS · PostgreSQL · Prisma |
 | [**Stonebridge Legal Solutions**](https://toukirahmedrony.com/projects/stonebridge-legal) | UK law firm platform: online consultation booking and an AI chatbot | Next.js · NestJS |
 | [**Zerago OS**](https://toukirahmedrony.com/projects/zerago-cleaning) | One system running a UK cleaning company: website, CMS, CRM, cleaner app, customer portal | Laravel |
 | [**Community Careline**](https://toukirahmedrony.com/projects/community-careline) | UK care provider: care assessment requests and job applications | Next.js · NestJS |
@@ -90,7 +92,7 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 <div align="center">
 
-**Hiring for a full-stack role in the UK or Ireland?** Let's talk.
+**Hiring for a full-stack role in the UK, Ireland or EU?** Let's talk.
 
 <a href="https://toukirahmedrony.com">Portfolio</a> · <a href="https://www.linkedin.com/in/toukir-rony/">LinkedIn</a> · <a href="mailto:toukirofficial1996@gmail.com">Email</a>
 
