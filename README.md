@@ -21,7 +21,7 @@
 
 ### 👋 About me
 
-I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web and **25 projects since 2020**, 18 of them for UK businesses in law, care, recruitment, education, construction and hospitality.
+I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web and **26 projects since 2020**, 18 of them for UK businesses in law, care, recruitment, education, construction and hospitality.
 
 - 🏗️ I build **CRMs, client portals, booking platforms and SaaS products**, from the first brief to production
 - 👥 At **SETS Tech** I lead a team of in-house and freelance developers while building core features myself
@@ -69,9 +69,18 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 `TypeScript` `NestJS` `Next.js` `PostgreSQL` `Prisma` `Redis` `BullMQ` `Zod` `Vitest`
 
+**Live demo:** [slotwise.toukirahmedrony.com](https://slotwise.toukirahmedrony.com)
+
 </td>
 </tr>
 </table>
+
+---
+
+### 🔨 Now building
+
+- 🏠 **TenancyLens** — an AI checker for tenancy agreements in England: RAG over official GOV.UK guidance with citations, an evaluation set, agent tools and a Python (FastAPI) service, deployed on AWS. Repo coming soon.
+- ☁️ **Slotwise on AWS** — Docker, ECS and a GitHub Actions pipeline, plus a live demo.
 
 ---
 
