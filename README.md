@@ -23,7 +23,7 @@
 
 **Full-Stack Software Engineer and Technical Lead.** 5+ years building business software: **25 client projects since 2020** (18 for UK businesses in law, care, recruitment, education, construction and hospitality), plus **6 open-source systems**.
 
-- 👥 I lead a team of in-house and freelance developers at **SETS Tech**: I plan the work, set the architecture, review code and build core features.
+- 👥 I'm the lead developer at **SETS Tech**: I design the architecture and data model, plan the work, build the core of each system and lead a small team of developers and freelancers.
 - 🚀 I took **StaffDock** and **RightUni** from spec to live production (multi-tenant SaaS, Next.js, NestJS, PostgreSQL).
 - 🔁 I moved live client platforms from **Laravel to TypeScript monorepos**.
 - 🎓 **MSc in Artificial Intelligence (Merit)**, University of Essex, used in live products: chatbots, a voice agent, WhatsApp automation.
