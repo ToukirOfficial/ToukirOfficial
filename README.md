@@ -2,7 +2,7 @@
 
 <img src="./banner.png" width="100%" alt="Toukir Ahmed Rony — Full-Stack Software Engineer & Technical Lead" />
 
-<h3>I build complete business systems — CRMs, client portals and booking platforms — from brief to production.</h3>
+<h3>Full-stack engineer building multi-tenant SaaS in TypeScript, NestJS and PostgreSQL.</h3>
 
 <p>
   <a href="https://toukirahmedrony.com"><img src="https://img.shields.io/badge/Portfolio-toukirahmedrony.com-ff3b00?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
@@ -21,15 +21,24 @@
 
 ### 👋 About me
 
-I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web and **26 projects since 2020**, 18 of them for UK businesses in law, care, recruitment, education, construction and hospitality.
+**Full-Stack Software Engineer and Technical Lead.** 5+ years building business software: **25 client projects since 2020** (18 for UK businesses in law, care, recruitment, education, construction and hospitality), plus **6 open-source systems**.
 
-- 🏗️ I build **CRMs, client portals, booking platforms and SaaS products**, from the first brief to production
-- 👥 At **SETS Tech** I lead a team of in-house and freelance developers while building core features myself
-- 🔁 I've moved live client platforms from **Laravel to TypeScript monorepos** (Next.js, NestJS, PostgreSQL, Prisma)
-- 🤖 **MSc in Artificial Intelligence** (University of Essex), used in real products: OpenAI chatbots, an AI voice agent, WhatsApp automation
-- 📱 Currently building native **iOS (Swift) and Android** apps
+- 👥 I lead a team of in-house and freelance developers at **SETS Tech**: I plan the work, set the architecture, review code and build core features.
+- 🚀 I took **StaffDock** and **RightUni** from spec to live production (multi-tenant SaaS, Next.js, NestJS, PostgreSQL).
+- 🔁 I moved live client platforms from **Laravel to TypeScript monorepos**.
+- 🎓 **MSc in Artificial Intelligence (Merit)**, University of Essex, used in live products: chatbots, a voice agent, WhatsApp automation.
 
 > Most of my client work lives in private repositories. The projects below are public, so you can read the code.
+
+---
+
+### 🧠 How I work
+
+- **Start with the problem.** I write the PRD and the plan, including non-functional requirements: security, performance, data retention and accessibility.
+- **Design the data model and boundaries first.** Tenant isolation in the API, money as integer pence, append-only records where history matters.
+- **Let the database enforce the rules that must never break**, such as an exclusion constraint against double-booking.
+- **Slow or risky work goes to queues.** Every critical path is tested against real PostgreSQL and Redis in CI.
+- I use AI coding tools to ship faster; I own the design, review every change and can explain every line.
 
 ---
 
@@ -38,7 +47,7 @@ I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web a
 <p align="center">
   <img src="https://skillicons.dev/icons?i=ts,nextjs,nestjs,react,nodejs,postgres,prisma,redis&perline=8" alt="TypeScript, Next.js, NestJS, React, Node.js, PostgreSQL, Prisma, Redis" />
   <br />
-  <img src="https://skillicons.dev/icons?i=laravel,php,mysql,tailwind,git,githubactions,swift,androidstudio&perline=8" alt="Laravel, PHP, MySQL, Tailwind, Git, GitHub Actions, Swift, Android" />
+  <img src="https://skillicons.dev/icons?i=laravel,php,mysql,tailwind,git,githubactions,docker&perline=8" alt="Laravel, PHP, MySQL, Tailwind, Git, GitHub Actions, Docker" />
 </p>
 
 | Area | Tools |
@@ -46,30 +55,101 @@ I'm a **Full-Stack Software Engineer and Technical Lead** with 5+ years in web a
 | **Frontend** | TypeScript, Next.js, React, Tailwind CSS |
 | **Backend** | NestJS, Node.js, Laravel, PHP, REST APIs, Zod |
 | **Data** | PostgreSQL, Prisma, MySQL, Redis, BullMQ |
-| **Quality & delivery** | Vitest, Supertest, GitHub Actions CI, Turborepo, PM2 |
+| **Quality & delivery** | Vitest, Supertest, GitHub Actions CI, Turborepo, PM2, Docker, Docker Compose |
 | **AI** | OpenAI API, Claude API, chatbots, voice agents, workflow automation |
 
 ---
 
-### ⭐ Featured project
+### 🔓 Open source
 
 <table>
 <tr>
-<td>
+<td width="50%" valign="top">
 
-#### [📅 Slotwise](https://github.com/ToukirOfficial/slotwise) — open-source booking engine for UK businesses
+#### [📅 Slotwise](https://github.com/ToukirOfficial/slotwise)
 
-A REST API, an embeddable booking widget, an owner dashboard and a background worker, for businesses that sell 1-to-1 appointments (clinics, solicitors, tutors, driving instructors).
+Booking engine for UK businesses that sell 1-to-1 appointments: API, embeddable widget, owner dashboard and worker. Correct across UK clock changes.
 
-- 🔒 **Never double-books.** PostgreSQL refuses overlapping bookings itself. 100 parallel requests for one slot give exactly 1 success and 99 rejections
-- 🕐 **Correct across UK clock changes**, tested on every 2026–2027 change
-- 📧 **Emails are never lost**, using an outbox, a separate worker and a send log
-- 🏢 **Multi-tenant and secure**: businesses are kept apart, plus signed webhooks, rotating sessions and rate limits
-- ✅ **157 tests** against real PostgreSQL and Redis, run by CI on every push
+- **No double-bookings, enforced by the database.** A PostgreSQL exclusion constraint: 100 parallel bookings for one slot → exactly 1 succeeds, 99 get 409.
+- **No lost emails.** The booking and an outbox row commit in one transaction; a worker relays them with deterministic job ids and a send log.
 
-`TypeScript` `NestJS` `Next.js` `PostgreSQL` `Prisma` `Redis` `BullMQ` `Zod` `Vitest`
+✅ **183 tests** · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `Redis`
 
-**Live demo:** [slotwise.toukirahmedrony.com](https://slotwise.toukirahmedrony.com)
+**[Live demo](https://slotwise.toukirahmedrony.com)**
+
+</td>
+<td width="50%" valign="top">
+
+#### [🧭 Jobsmith](https://github.com/ToukirOfficial/Jobsmith)
+
+Self-hosted job search workspace with an AI agent that runs as seven typed, schema-checked steps. It only prepares applications, never sends anything, and treats job page text as untrusted data to resist prompt injection.
+
+- **SSRF-safe job fetching.** Every DNS answer is checked against private and cloud-metadata ranges, then the connection is pinned to the checked IP, so DNS rebinding can't swap it.
+- **Fixed a production memory incident.** Streamed the 143k-row register in batches with one fixed `INSERT … unnest` instead of `createMany`, and capped the heap: worker memory 1 GB → ~250 MB.
+
+✅ **92 tests** · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `Zod`
+
+**[Live demo](https://jobsmith.toukirahmedrony.com)**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### [🏠 OpenLet](https://github.com/ToukirOfficial/OpenLet)
+
+Property and tenancy management for small landlords and letting agents, with a tenant portal and a contractor job page.
+
+- **Append-only rent ledger in integer pence.** Mistakes are reversed, never edited, so the history always adds up.
+- **Idempotent daily rent job.** A unique key on (tenancy, period start) means running it twice never charges twice, including due days on the 29th–31st.
+
+✅ **115 tests** · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `Redis`
+
+**[Live demo](https://openlet.toukirahmedrony.com)**
+
+</td>
+<td width="50%" valign="top">
+
+#### [📂 DocRequest](https://github.com/ToukirOfficial/docrequest)
+
+Client document portal for firms that chase clients for paperwork: one secure link, upload from a phone, review and download.
+
+- **Per-file encryption.** Each file has its own AES-256-GCM key, wrapped by a master key from the environment or AWS KMS.
+- **Scan before access.** Uploads are virus-scanned on a BullMQ queue before staff can open them; client links are stored only as SHA-256 hashes.
+
+✅ **79 tests** · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `ClamAV`
+
+**[Live demo](https://docrequest.toukirahmedrony.com)**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### [💬 Frontdesk](https://github.com/ToukirOfficial/frontdesk)
+
+Receptionist chat for small business websites. It answers only from the business's own knowledge and hands over to a person when unsure. Bring your own key.
+
+- **No cross-tenant retrieval.** Vector search (pgvector) is filtered by workspace, so one business can never retrieve another's data.
+- **Real-time.** Replies stream over WebSockets, and staff can take over a live conversation.
+
+✅ **156 tests** · `NestJS` `Next.js` `PostgreSQL` `pgvector` `Socket.IO` `Redis`
+
+**[Live demo](https://frontdesk.toukirahmedrony.com)**
+
+</td>
+<td width="50%" valign="top">
+
+#### [🔎 uk-sponsors](https://github.com/ToukirOfficial/uk-sponsors)
+
+Command-line tool for job seekers to search the UK Home Office register of licensed visa sponsors by name, city, route and industry.
+
+- **Streams, never loads.** The full GOV.UK register is downloaded and parsed as a stream, and the new index is swapped in only after it passes checks.
+- **Fails clearly when the source changes.** Every load checks the CSV columns and names any that GOV.UK renamed or removed.
+
+✅ **137 tests**, on Linux, macOS and Windows · `TypeScript` `Node.js` `Commander` `Vitest`
+
+**[Read more](https://toukirahmedrony.com/projects/uk-sponsors)**
 
 </td>
 </tr>
@@ -77,19 +157,12 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 ---
 
-### 🔨 Now building
-
-- 🏠 **TenancyLens** — an AI checker for tenancy agreements in England: RAG over official GOV.UK guidance with citations, an evaluation set, agent tools and a Python (FastAPI) service, deployed on AWS. Repo coming soon.
-- ☁️ **Slotwise on AWS** — Docker, ECS and a GitHub Actions pipeline, plus a live demo.
-
----
-
 ### 💼 Selected client work
 
 | Project | What it is | Stack |
 |---|---|---|
-| [**StaffDock**](https://staffdock.co.uk) | UK staff document compliance SaaS, live | Next.js · NestJS · PostgreSQL · Prisma |
-| [**RightUni**](https://rightuni.co.uk) | Free study-abroad organiser with an encrypted document vault, live | Next.js · NestJS · PostgreSQL · Prisma |
+| [**StaffDock**](https://toukirahmedrony.com/projects/staffdock) | UK staff document compliance SaaS, live | Next.js · NestJS · PostgreSQL · Prisma |
+| [**RightUni**](https://toukirahmedrony.com/projects/rightuni) | Free study-abroad organiser with an encrypted document vault, live | Next.js · NestJS · PostgreSQL · Prisma |
 | [**Stonebridge Legal Solutions**](https://toukirahmedrony.com/projects/stonebridge-legal) | UK law firm platform: online consultation booking and an AI chatbot | Next.js · NestJS |
 | [**Zerago OS**](https://toukirahmedrony.com/projects/zerago-cleaning) | One system running a UK cleaning company: website, CMS, CRM, cleaner app, customer portal | Laravel |
 | [**Community Careline**](https://toukirahmedrony.com/projects/community-careline) | UK care provider: care assessment requests and job applications | Next.js · NestJS |
@@ -105,5 +178,6 @@ A REST API, an embeddable booking widget, an owner dashboard and a background wo
 
 <a href="https://toukirahmedrony.com">Portfolio</a> · <a href="https://www.linkedin.com/in/toukir-rony/">LinkedIn</a> · <a href="mailto:toukirofficial1996@gmail.com">Email</a>
 
+Based in Huddersfield, UK. Open to full-time roles in the UK, Ireland and EU.
 
 </div>
