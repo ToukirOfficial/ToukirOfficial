@@ -12,7 +12,7 @@
 
 <p>
   <img src="https://img.shields.io/badge/Based%20in-Huddersfield%2C%20UK-111111?style=flat-square" alt="Based in Huddersfield, UK" />
-  <img src="https://img.shields.io/badge/Open%20to-Full--time%20roles%20%C2%B7%20UK%2C%20Ireland%20%26%20EU-ff3b00?style=flat-square" alt="Open to full-time roles in the UK, Ireland and EU" />
+  <img src="https://img.shields.io/badge/Open%20to-Full--time%20roles%20%C2%B7%20UK%20%28Leeds%2C%20Manchester%2C%20London%2C%20remote%2Fhybrid%29-ff3b00?style=flat-square" alt="Open to full-time roles in the UK (Leeds, Manchester, London, remote/hybrid)" />
 </p>
 
 </div>
@@ -21,10 +21,12 @@
 
 ### 👋 About me
 
-**Full-Stack Software Engineer and Technical Lead.** 5+ years building business software: **25 client projects since 2020** (18 for UK businesses in law, care, recruitment, education, construction and hospitality), plus **6 open-source systems**.
+**Full-Stack Software Engineer and Technical Lead.** 5+ years building business software: **50+ projects since 2020** (18 for UK businesses in law, care, recruitment, education, construction and hospitality), plus **4 open-source systems**.
 
-- 👥 I'm the lead developer at **SETS Tech**: I design the architecture and data model, plan the work, build the core of each system and lead a small team of developers and freelancers.
-- 🚀 I took **StaffDock** and **RightUni** from spec to live production (multi-tenant SaaS, Next.js, NestJS, PostgreSQL).
+**Eligible to work in the UK · Available at short notice**
+
+- 👥 I'm the Technical Lead at **SETS Tech**: I design the architecture and data model, plan the work, build the core of each system and lead a small team of developers and freelancers.
+- 🚀 I built **StaffDock** and **RightUni** from spec to launch (multi-tenant SaaS, Next.js, NestJS, PostgreSQL).
 - 🔁 I moved live client platforms from **Laravel to TypeScript monorepos**.
 - 🎓 **MSc in Artificial Intelligence (Merit)**, University of Essex, used in live products: chatbots, a voice agent, WhatsApp automation.
 
@@ -73,7 +75,7 @@ Booking engine for UK businesses that sell 1-to-1 appointments: API, embeddable 
 - **No double-bookings, enforced by the database.** A PostgreSQL exclusion constraint: 100 parallel bookings for one slot → exactly 1 succeeds, 99 get 409.
 - **No lost emails.** The booking and an outbox row commit in one transaction; a worker relays them with deterministic job ids and a send log.
 
-✅ **183 tests** · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `Redis`
+✅ Tested in CI against real PostgreSQL and Redis · `NestJS` `Next.js` `PostgreSQL` `Prisma` `BullMQ` `Redis`
 
 **[Live demo](https://slotwise.toukirahmedrony.com)**
 
@@ -123,36 +125,6 @@ Client document portal for firms that chase clients for paperwork: one secure li
 
 </td>
 </tr>
-<tr>
-<td width="50%" valign="top">
-
-#### [💬 Frontdesk](https://github.com/ToukirOfficial/frontdesk)
-
-Receptionist chat for small business websites. It answers only from the business's own knowledge and hands over to a person when unsure. Bring your own key.
-
-- **No cross-tenant retrieval.** Vector search (pgvector) is filtered by workspace, so one business can never retrieve another's data.
-- **Real-time.** Replies stream over WebSockets, and staff can take over a live conversation.
-
-✅ **156 tests** · `NestJS` `Next.js` `PostgreSQL` `pgvector` `Socket.IO` `Redis`
-
-**[Live demo](https://frontdesk.toukirahmedrony.com)**
-
-</td>
-<td width="50%" valign="top">
-
-#### [🔎 uk-sponsors](https://github.com/ToukirOfficial/uk-sponsors)
-
-Command-line tool for job seekers to search the UK Home Office register of licensed visa sponsors by name, city, route and industry.
-
-- **Streams, never loads.** The full GOV.UK register is downloaded and parsed as a stream, and the new index is swapped in only after it passes checks.
-- **Fails clearly when the source changes.** Every load checks the CSV columns and names any that GOV.UK renamed or removed.
-
-✅ **137 tests**, on Linux, macOS and Windows · `TypeScript` `Node.js` `Commander` `Vitest`
-
-**[Read more](https://toukirahmedrony.com/projects/uk-sponsors)**
-
-</td>
-</tr>
 </table>
 
 ---
@@ -174,10 +146,10 @@ Command-line tool for job seekers to search the UK Home Office register of licen
 
 <div align="center">
 
-**Hiring for a full-stack role in the UK, Ireland or EU?** Let's talk.
+**Hiring for a full-stack role in the UK?** Let's talk.
 
 <a href="https://toukirahmedrony.com">Portfolio</a> · <a href="https://www.linkedin.com/in/toukir-rony/">LinkedIn</a> · <a href="mailto:toukirofficial1996@gmail.com">Email</a>
 
-Based in Huddersfield, UK. Open to full-time roles in the UK, Ireland and EU.
+Based in Huddersfield, UK. Open to full-time roles in the UK (Leeds, Manchester, London, remote/hybrid).
 
 </div>
