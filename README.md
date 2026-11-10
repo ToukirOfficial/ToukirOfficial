@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./banner.png" width="100%" alt="Toukir Ahmed Rony — Full-Stack Software Engineer & Technical Lead" />
+<img src="./banner.png" width="100%" alt="Toukir Ahmed Rony — Full-Stack Software Engineer" />
 
 <h3>Full-stack engineer building multi-tenant SaaS in TypeScript, NestJS and PostgreSQL.</h3>
 
@@ -21,11 +21,12 @@
 
 ### 👋 About me
 
-**Full-Stack Software Engineer and Technical Lead.** 5+ years building business software: **25 client projects since 2020** (18 for UK businesses in law, care, recruitment, education, construction and hospitality), plus **6 open-source systems**.
+**Full-Stack Software Engineer.** 5+ years building business software: **50+ projects since 2020** (18 for UK businesses in law, care, property, recruitment, education, construction and hospitality), plus **6 open-source projects**.
 
-- 👥 I'm the lead developer at **SETS Tech**: I design the architecture and data model, plan the work, build the core of each system and lead a small team of developers and freelancers.
+- 👥 At **SETS Tech** I lead a team of 5 developers plus freelancers: I design the architecture and data model, plan the work and build the core of each system.
 - 🚀 I took **StaffDock** and **RightUni** from spec to live production (multi-tenant SaaS, Next.js, NestJS, PostgreSQL).
-- 🔁 I moved live client platforms from **Laravel to TypeScript monorepos**.
+- 🔁 I rebuild client platforms as **TypeScript monorepos**.
+- 🏫 Before TypeScript, I built **10+ school management systems** and several **hospital management systems** in Laravel and PHP for clients in Bangladesh.
 - 🎓 **MSc in Artificial Intelligence (Merit)**, University of Essex, used in live products: chatbots, a voice agent, WhatsApp automation.
 
 > Most of my client work lives in private repositories. The projects below are public, so you can read the code.
@@ -56,7 +57,7 @@
 | **Backend** | NestJS, Node.js, Laravel, PHP, REST APIs, Zod |
 | **Data** | PostgreSQL, Prisma, MySQL, Redis, BullMQ |
 | **Quality & delivery** | Vitest, Supertest, GitHub Actions CI, Turborepo, PM2, Docker, Docker Compose |
-| **AI** | OpenAI API, Claude API, chatbots, voice agents, workflow automation |
+| **AI** | OpenAI, Claude and Gemini APIs, chatbots, voice agents, workflow automation |
 
 ---
 
